@@ -162,7 +162,6 @@ span{
         width: 50%;
         height: 100vh;
         position: absolute;
-        top: 85px;
         left: -100%;
         transition: all 0.3s ease-out;
     }
