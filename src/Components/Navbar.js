@@ -12,6 +12,8 @@ function Navbar() {
     const [MenuBar, SetMenuBar]= useState(false);
     const ShowMenuBar = ()=> SetMenuBar(!MenuBar);
 
+    const CloseMenuBar = ()=> SetMenuBar(false);
+
     return (
         <nav>
             <nav className='top-navbar'>
@@ -46,7 +48,7 @@ function Navbar() {
                         {MenubarData.map((item,index)=>{
                             return(
                                 <li key={index} className='nav-item'>
-                                    <Link to={item.Path} className={item.CName}>{item.Icon}
+                                    <Link to={item.Path} className={item.CName} onClick={CloseMenuBar}>{item.Icon}
                                     <span>{item.Title}  </span></Link>
                                 </li>
                           );
