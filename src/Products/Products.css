@@ -1,5 +1,44 @@
 .main-products-container{
     display: flex;
+    justify-content: space-between;
+}
+
+.products-container{
+    display: flex;
+    margin: 1rem;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.single-product-card{
+    width: 16rem;
+    margin: 5px; 
+    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.single-product-card:hover{
+    border: 2px solid #7CC24F;
+}
+
+@media screen and (max-width: 960px){
+    .products-container{
+        flex-wrap: wrap;
+    }
+
+    .single-product-card{
+        width: 16rem;
+        height: 425px;
+    }
+}
+
+
+.shopping-cart-container{
+    display: flex;
+    margin: 1rem;
+    width: 20%;
 }
