@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {ProductData} from './ProductData';
+import './Products.css';
 
 class Products extends Component {
 
@@ -19,10 +20,10 @@ class Products extends Component {
         return (
             <div className='main-products-container'>
                 <div className='products-container'>
-
+                 <h1>Sachin Nimshan</h1>
                 </div>
                 <div className='shopping-cart-container'>
-
+                <h1>Sachin Nimshan</h1>
                 </div>
             </div>
         )
