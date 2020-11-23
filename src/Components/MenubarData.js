@@ -7,43 +7,43 @@ import {AiOutlineCar} from 'react-icons/ai';
 export const MenubarData = [
     {
         Title: 'All Deals',
-        path: '/',
+        Path: '/',
         Icon: <BiBorderAll/>,
         CName: 'nav-links'
     },
     {
         Title: 'Things To Do',
-        path: '/',
+        Path: '/hero',
         Icon: <FiGift/>,
         CName: 'nav-links'
     },
     {
         Title: 'Health & Fitness',
-        path: '/',
+        Path: '/',
         Icon: <AiOutlineCar/>,
         CName: 'nav-links'
     },
     {
         Title: 'Food & Drinks',
-        path: '/',
+        Path: '/',
         Icon: <FiGift/>,
         CName: 'nav-links'
     },
     {
         Title: 'Car & Services',
-        path: '/',
+        Path: '/',
         Icon: <AiOutlineCar/>,
         CName: 'nav-links'
     },
     {
         Title: 'All Deals',
-        path: '/',
+        Path: '/',
         Icon: <FiGift/>,
         CName: 'nav-links'
     },
     {
         Title: 'All Deals',
-        path: '/',
+        Path: '/',
         Icon: <AiOutlineCar/>,
         CName: 'nav-links'
     }

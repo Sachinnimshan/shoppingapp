@@ -1,54 +1,31 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-import {ProductData} from './ProductData';
-import 'bootstrap/dist/css/bootstrap.css';
-import {Button, Badge,Card,ListGroup,ListGroupItem} from 'react-bootstrap';
 import './Products.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import {Button,Card,ListGroup,ListGroupItem} from 'react-bootstrap';
+import formatCurrency from '../Currency';
 
-class Products extends Component {
-
-    constructor(){
-        super();
-        this.state=
-        {
-            Products: ProductData,
-            Sizes: '',
-            Sort: ''
-
-        }
-    }
-    
-
+export default class Products extends Component {
     render() {
         return (
-            <div className='main-products-container'>
-            <div className='products-container'>
-            {ProductData.map((item,index)=>{
-                return(
-                  <Card className='single-product-card'>
-                    <Card.Body>
-                    <Card.Title>{item.Title}</Card.Title>
-                    <Card.Img variant="top" src={item.Image}/>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                      <ListGroupItem>{item.Price}</ListGroupItem>
-                      <ListGroupItem><Link to=''><Button>ADD TO CART</Button></Link></ListGroupItem>
-                    </ListGroup>
-                  </Card>
-                  );
-               })}
+           
             
-            </div>
-
-            <div className='shopping-cart-container'>
-            <h1> Hello Sachin</h1>
-            </div>
-            </div>
+              <div className='products-container'>
+                 {this.props.products.map(product=>(
+                     <Card className='single-product-card' key={product._id}>
+                     <Card.Body>
+                     <Card.Title>{product.Title}</Card.Title>
+                     <Card.Img variant="top" src={product.Image}/>
+                     </Card.Body>
+                     <ListGroup className="list-group-flush">
+                     <ListGroupItem>{formatCurrency (product.Price)}</ListGroupItem>
+                     <ListGroupItem>
+                     <Button onClick={() => this.props.AddToCart(product)}>ADD TO CART</Button></ListGroupItem>
+                     </ListGroup>
+                     </Card>
+                      ))}   
+                
+              </div>
             
-            
-     
         )
     }
 }
-
-export default Products;

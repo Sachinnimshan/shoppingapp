@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.main-footer{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    margin-top: 5px;
+    padding: 20px 20px;
+    justify-content: space-evenly;
+    background-color: #F8F8F8;
+    width: 100%;
+    height: auto;
+    
+}
+
+h4{
+    color: #3D464D;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.footer-column{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-links{
+    font-size: 16px;
+    color: #3D464D;
+    font-family: 'Roboto';
+    text-decoration: none;
+    line-height: 2;
+    
+}
+
+.footer-links:hover{
+    text-decoration: none;
+    color: #7CC24F;
+}
+
+.newsletter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.news-text-field{
+    height: 40px;
+    width: 225px;
+    padding: 10px;
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.news-btn-subscribe{
+    margin-left: 5px;
+    height: 40px;
+    background-color: #47991F;
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 15px;
+    border: none;
+
+}
+
+
+
+
+h5{
+    color: black;
+    font-size: 15px;
+}
+
+.social-links{
+    font-size: 2.2rem;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mobile-app-links{
+    font-size: 2.2rem;
+    padding: 5px;
+}
+
+.mobile-app-logo{
+    width: 100px;
+}
+
+.mobile-app-logo:hover{
+    opacity: 0.8;
+}
+
+.footer-end-container{
+    background-color: #F8F8F8;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.designer-links{
+    color: #47991F;
+}
+.designer-links:hover{
+   text-decoration: none;
+   color: #7CC24F;
+}
+
+@media screen and (max-width: 960px){
+    .main-footer{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
+    
+    .footer-end-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

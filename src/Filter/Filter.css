@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.main-filter-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+.display-items-container{
+    width: 30%;
+    align-items: center;
+}
+
+.display-items-container > h4{
+    text-decoration: none;
+}
+
+.filter-container{
+    margin-top: 0.5rem;
+    margin: 1rem;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.filter-dropdowns{
+    height: 40px;
+    width: 150px;
+    border: 2px solid #47991F;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto';
+}
+
+.dropdown-item{
+    padding: 5px;
+}
+
+@media screen and (max-width: 760px){
+    .display-items-container{
+        display: none;
+    }
+}

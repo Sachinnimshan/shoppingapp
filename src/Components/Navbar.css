@@ -8,6 +8,7 @@
     height: 35px;
     background-color: #FFFFFF;
     border-bottom: 1px solid#DCDCDC;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .top-links-container{
@@ -28,6 +29,7 @@
 
 .about-links:hover{
     color: #7CC24F;
+    text-decoration: none;
 }
 
 .login-sign-container{
@@ -40,8 +42,12 @@
     text-decoration: none;
     color: #7CC24F;
     font-family: 'Roboto';
-    font-size: 15px;
-    
+    font-size: 15px;    
+}
+
+.login-sign-links:hover{
+    text-decoration: none;
+    color: #7CC24F;
 }
 
 @media screen and (max-width: 960px){
@@ -54,7 +60,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #DCDCDC;
+    background-color: #F8F8F8;
 }
 
 .shop-logo-container{
@@ -96,10 +102,16 @@
     height: 40px;
     border: none;
     margin-left: 5px;
-    font-size: 1.5rem;
-    border: 2px solid #7CC24F;
+    font-size: 1rem;
+    border: 2px solid #47991F;
     border-radius: 5px;
     color: gray;
+}
+
+@media screen and (max-width: 760px){
+    .search-bar{
+        width: 80%;
+    }
 }
 
 .search-btn:hover{
@@ -109,8 +121,8 @@
 
 .bottom-navbar{
     display: flex;
-    justify-content: start;
     align-items: center;
+    justify-content: start;
     background-color: #281C1C;
     height: 50px;
 }
@@ -121,13 +133,14 @@
     grid-gap: 10px;
     list-style: none;
     text-align: center;
+    align-items: center;
     width: 70vw;
     justify-content: start;
     margin-left: 2rem;   
 }
 
 .nav-item{
-    width: 130px;
+    width: 140px;
 }
 
 .nav-links{
@@ -135,7 +148,7 @@
     text-decoration: none;
     font-family: 'Roboto';
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .nav-links:hover{
@@ -161,6 +174,7 @@ span{
         height: 100vh;
         position: absolute;
         left: -100%;
+        top: 85px;
         transition: all 0.3s ease-out;
     }
 

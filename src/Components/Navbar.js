@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
-import {BsSearch} from 'react-icons/bs';
 import {FaBars,FaTimes} from 'react-icons/fa';
-import {HiMenuAlt2} from 'react-icons/hi';
-import {AiOutlineClose} from 'react-icons/ai';
 import { MenubarData } from './MenubarData';
 
 function Navbar() {
@@ -23,7 +20,7 @@ function Navbar() {
                 </div>
 
                 <div className='login-sign-container'>
-                <Link to='/' className='login-sign-links'>Login / Signup</Link>
+                <Link to='/hero' className='login-sign-links'>Login / Signup</Link>
                 </div>
 
             </nav>
@@ -35,7 +32,7 @@ function Navbar() {
 
                 <div className='search-bar-container'>
                     <input type='text' placeholder='Search For Anything' className='search-bar'/>
-                    <button className='search-btn'><BsSearch/></button>
+                    <button className='search-btn'><img src='/Icons/search.png'/></button>
                 </div>
 
             </nav>
@@ -44,6 +41,7 @@ function Navbar() {
                 <div className='menu-bars' onClick={ShowMenuBar}>
                     {MenuBar ? <FaTimes/>: <FaBars/>}
                 </div>
+                <div>
                     <ul className={MenuBar? 'nav-menu active': 'nav-menu'}>
                         {MenubarData.map((item,index)=>{
                             return(
@@ -55,6 +53,7 @@ function Navbar() {
                         })}
 
                     </ul>
+                    </div>
             </nav>
 
         </nav>
