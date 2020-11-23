@@ -8,12 +8,12 @@
 .products-container{
     display: flex;
     margin: 1rem;
-    width: 80%;
+    width: 75%;
     flex-wrap: wrap;
 }
 
 .single-product-card{
-    width: 15rem;
+    width: 14rem;
     margin: 4px;
     height: 400px; 
     display: flex;
@@ -37,7 +37,7 @@
     }
 
     .single-product-card{
-        width: 16rem;
+        width: 14rem;
         height: 425px;
     }
 }

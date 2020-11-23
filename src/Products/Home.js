@@ -10,7 +10,8 @@ export class Home extends Component {
         super();
         this.state= {
             products: ProductData,
-            CartItems: [],
+            CartItems: localStorage.getItem("CartItems") ?
+            JSON.parse(localStorage.getItem("CartItems")): [],
             sort: "",
             size: ""
         }
@@ -20,6 +21,10 @@ export class Home extends Component {
         this.RemoveFromCart = this.RemoveFromCart.bind(this);
 
        
+    }
+
+    CreateOrder(Order){
+      alert("Need To Save Your Order " + Order.Name);
     }
 
     AddToCart =(product)=>{
@@ -35,14 +40,15 @@ export class Home extends Component {
         CartItems.push({...product, count: 1});
       }
       this.setState({CartItems});
+      localStorage.setItem("CartItems", JSON.stringify(CartItems));
     }
 
     RemoveFromCart = (product)=>{
       const CartItems = this.state.CartItems.slice();
       this.setState({CartItems: CartItems.filter((x)=> x._id !==product._id),
       });
-
-
+      localStorage.setItem("CartItems",
+      JSON.stringify(CartItems.filter((x)=> x._id !==product._id)));
     }
 
     FilterByPrice =(e) =>{
@@ -91,7 +97,8 @@ export class Home extends Component {
              <Products products = {this.state.products}
              AddToCart = {this.AddToCart}/>
              <Cart CartItems={this.state.CartItems}
-             RemoveFromCart = {this.RemoveFromCart}/>
+             RemoveFromCart = {this.RemoveFromCart}
+             CreateOrder = {this.CreateOrder}/>
             </div>
             
           </div>
