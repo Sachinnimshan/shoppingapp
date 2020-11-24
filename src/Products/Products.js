@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Products.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import {Button,Card,ListGroup,ListGroupItem} from 'react-bootstrap';
+import {Button,Card,ListGroup,ListGroupItem,Badge} from 'react-bootstrap';
 import {AiOutlineClose} from 'react-icons/ai';
 import formatCurrency from '../Currency';
 import Modal from 'react-modal';
@@ -53,24 +53,43 @@ export default class Products extends Component {
                     <Modal isOpen={true} onRequestClose={this.CloseModal}>
                         <Zoom>
                         <Button className='btn-zoom-close' variant='danger' onClick={this.CloseModal}>
-                            <AiOutlineClose className='btn-zoom-close-icon'/>
+                        <AiOutlineClose className='btn-zoom-close-icon'/>
                         </Button>
-                            <div className='single-zoom-product-container'>
+                        <div className='main-single-zoom-container'>
+                        <div className='single-zoom-product-container'>
                                 <Card className='single-zoom-product-card'>
                                 <Card.Body>
                                 <Card.Title>{product.Title}</Card.Title>
                                 <Card.Img variant="top" src={product.Image}/>
                                 </Card.Body>
-                                </Card>
-                                
-                            </div>
-                        </Zoom>
-                        
-
+                                </Card>   
+                        </div>
+                        <ul className='single-zoom-product-details'>
+                         <p className='single-zoom-product-description'>
+                             {product.Description}</p>
+                             <div>
+                                <p className='single-zoom-product-availability'>
+                                   Available Sizes : {" "}
+                                   {product.Availability.map((x)=>(
+                                       <span>{" "}
+                                       <Button variant='primary'>{x}</Button>
+                                       </span>
+                                     ))}
+                                </p>
+                             </div>    
+                            <p className='single-zoom-product-price'>
+                                Price :{" "}{formatCurrency(product.Price)}</p>
+                                <Button variant='primary'
+                                onClick={()=> {this.props.AddToCart(product);
+                                this.CloseModal();
+                            }}
+                                >ADD TO CART</Button>
+                        </ul>
+                       </div>
+                       </Zoom>
                     </Modal>
                 )}
-                
-              </div>
+               </div>
               
               
             

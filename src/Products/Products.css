@@ -43,9 +43,10 @@
 }
 
 .btn-zoom-close{
-    font-size: 2rem;
-    height: auto;
-    width: auto;
+    font-size: 1rem;
+    height: 3rem;
+    font-weight: bold;
+    width: 3rem;
     justify-self: flex-end;
 }
 
@@ -55,6 +56,43 @@
     font-weight: bold;
 }
 
-.single-zoom-product-card{
+.main-single-zoom-container{
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.single-zoom-product-container{
+    display: flex;
+    width: 22rem;
+}
+
+.single-zoom-product-card{
+    width: 22rem;
+    height: auto;
+    margin-top: 1rem;
+    justify-content: start;
+}
+
+.single-zoom-product-details{
+    width: 60%;
+    height: 10%;
+}
+
+.single-zoom-product-description{
+    font-size: 17px;
+    line-height: 2;
+    font-family: 'Roboto';
+    text-align: justify;
+}
+
+.single-zoom-product-price{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+.single-zoom-product-availability{
+    font-size: 25px;
+    font-weight: bold;
+    color: #47991F;
 }
