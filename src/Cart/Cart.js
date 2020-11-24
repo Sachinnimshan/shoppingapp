@@ -3,6 +3,7 @@ import './Cart.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Button,Card,ListGroup,ListGroupItem,Form} from 'react-bootstrap';
 import formatCurrency from '../Currency';
+import Fade from 'react-reveal/Fade'
 
 export default class Cart extends Component {
     constructor(props){
@@ -45,6 +46,7 @@ export default class Cart extends Component {
                 (<div className='shopping-cart-details-container'>Cart is Empty</div>) :
                 (<div className='shopping-cart-details-container'>You have {CartItems.length} Items in Cart</div>)}
                 <div className='cart-items-container'>
+                    <Fade left cascade>
                     <ul className='cart-items'>
                      {CartItems.map(item =>(
                      <Card key={item._id} className='single-cart-item'>
@@ -62,6 +64,7 @@ export default class Cart extends Component {
                      ))}
 
                     </ul>
+                    </Fade>
 
                 </div>
                 {CartItems.length !== 0 &&(
@@ -77,17 +80,18 @@ export default class Cart extends Component {
                 </div>
 
                 {this.state.ShowCheckOut && (
+                    <Fade right cascade>
                     <div className='show-checkout-container'>
                         <Form onSubmit={this.CreateOrder}>
-                        <Form.Label>Name</Form.Label>
+                        <Form.Label className='form-order-label'>Name</Form.Label>
                         <Form.Control type="text" name='Name' 
                         placeholder="Enter Name"
                         onChange={this.HandleInput}/>
-                        <Form.Label>Email Address</Form.Label>
+                        <Form.Label className='form-order-label'>E - Mail</Form.Label>
                         <Form.Control type="email" name='Email' 
                         placeholder="Enter Email"
                         onChange={this.HandleInput}/>
-                        <Form.Label>Address</Form.Label>
+                        <Form.Label className='form-order-label'>Address</Form.Label>
                         <Form.Control type="text" name='Address' 
                         placeholder="Enter Address"
                         onChange={this.HandleInput}/>
@@ -96,6 +100,7 @@ export default class Cart extends Component {
                         </Form>
 
                     </div>
+                    </Fade>
                 )}
 
 

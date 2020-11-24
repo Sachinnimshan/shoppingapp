@@ -41,3 +41,20 @@
         height: 425px;
     }
 }
+
+.btn-zoom-close{
+    font-size: 2rem;
+    height: auto;
+    width: auto;
+    justify-self: flex-end;
+}
+
+.btn-zoom-close-icon{
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-zoom-product-card{
+
+}
