@@ -55,7 +55,7 @@ export default class Cart extends Component {
                      <Card.Img variant="top" src={item.Image} className='cart-item-image'/>
                      </Card.Body>
                      <ListGroup className="list-group-flush">
-                     <ListGroupItem>{formatCurrency (item.Price)}  X  {item.count}</ListGroupItem>
+                     <ListGroupItem>{formatCurrency(item.Price)}  X  {item.count}</ListGroupItem>
                      <ListGroupItem>
                      <Button variant='danger' onClick={() => this.props.RemoveFromCart(item)}>
                          REMOVE</Button></ListGroupItem>
